@@ -1548,7 +1548,7 @@ pre {
   .form-control:focus {
     color: #495057;
     background-color: transparent;
-    border-color: #eceff1;
+    /*border-color: #eceff1;*/
     outline: 0;
     box-shadow: none; }
   .form-control::-webkit-input-placeholder {
@@ -7009,11 +7009,11 @@ a.text-dark:focus, a.text-dark:hover {
   padding: 2.1rem 2.2rem; }
 
 .form-control {
-  padding-left: 2px;
-  padding-right: 2px;
-  border-left: 0;
-  border-right: 0;
-  border-top: 0;
+  /*padding-left: 2px;*/
+  /*padding-right: 2px;*/
+  /*border-left: 0;*/
+  /*border-right: 0;*/
+  /*border-top: 0;*/
   resize: none;
   -webkit-appearance: none;
      -moz-appearance: none;
