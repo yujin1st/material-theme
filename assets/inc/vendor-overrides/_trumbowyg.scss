@@ -9,17 +9,17 @@
   border-color: $input-border-color;
 
   &:after {
-    background-color: $input-border-color;
+    display: none;
   }
 
   .trumbowyg-button-group {
-    &:not(:empty) {
-      & + .trumbowyg-button-group {
-        &:before {
-          background-color: $input-border-color;
-        }
-      }
+    &:after {
+      display: none;
     }
+  }
+
+  button {
+    margin: 0;
   }
 }
 

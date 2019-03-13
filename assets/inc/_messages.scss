@@ -34,7 +34,7 @@ $message-sidebar-width: 23rem;
       @include font-icon('\f1c3', 1.3rem);
       position: absolute;
       left: 0;
-      bottom: 0.35rem;
+      bottom: 0.15rem;
     }
   }
 
@@ -57,9 +57,16 @@ $message-sidebar-width: 23rem;
 .messages__content {
   position: relative;
   flex: 1 1 auto;
-  padding: 2.5rem;
   overflow: hidden;
   height: 100%;
+
+  @include media-breakpoint-up(md) {
+    padding: 2.5rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 1.5rem;
+  }
 }
 
 .messages__item {
@@ -68,11 +75,14 @@ $message-sidebar-width: 23rem;
 
   &:not(.messages__item--right) {
     flex-direction: row;
+
+    .messages__details {
+      padding-left: 1rem;
+    }
   }
 }
 
 .messages__details {
-  padding: 0 1rem;
   max-width: 500px;
 
   & > p {
@@ -89,7 +99,7 @@ $message-sidebar-width: 23rem;
 
   & > small {
     display: block;
-    padding: 0 1.5rem;
+    padding: 0 1rem;
     margin-top: 1rem;
     color: $text-muted;
     font-size: 0.9rem;

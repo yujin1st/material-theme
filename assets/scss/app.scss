@@ -3,43 +3,11 @@
 
 
 // Mixins
-@import "inc/mixins/mixins"; // This also includes Bootstrap Mixins
+@import "inc/mixins/mixins";
 
 
 // Bootstrap
-@import "../vendors/bower_components/bootstrap/scss/functions";
-@import "../vendors/bower_components/bootstrap/scss/variables";
-@import "../vendors/bower_components/bootstrap/scss/root";
-@import "../vendors/bower_components/bootstrap/scss/reboot";
-@import "../vendors/bower_components/bootstrap/scss/type";
-@import "../vendors/bower_components/bootstrap/scss/images";
-@import "../vendors/bower_components/bootstrap/scss/code";
-@import "../vendors/bower_components/bootstrap/scss/grid";
-@import "../vendors/bower_components/bootstrap/scss/tables";
-@import "../vendors/bower_components/bootstrap/scss/forms";
-@import "../vendors/bower_components/bootstrap/scss/buttons";
-@import "../vendors/bower_components/bootstrap/scss/transitions";
-@import "../vendors/bower_components/bootstrap/scss/dropdown";
-@import "../vendors/bower_components/bootstrap/scss/button-group";
-@import "../vendors/bower_components/bootstrap/scss/input-group";
-@import "../vendors/bower_components/bootstrap/scss/custom-forms";
-@import "../vendors/bower_components/bootstrap/scss/nav";
-@import "../vendors/bower_components/bootstrap/scss/navbar";
-@import "../vendors/bower_components/bootstrap/scss/card";
-@import "../vendors/bower_components/bootstrap/scss/breadcrumb";
-@import "../vendors/bower_components/bootstrap/scss/pagination";
-@import "../vendors/bower_components/bootstrap/scss/badge";
-@import "../vendors/bower_components/bootstrap/scss/jumbotron";
-@import "../vendors/bower_components/bootstrap/scss/progress";
-@import "../vendors/bower_components/bootstrap/scss/media";
-@import "../vendors/bower_components/bootstrap/scss/list-group";
-@import "../vendors/bower_components/bootstrap/scss/close";
-@import "../vendors/bower_components/bootstrap/scss/modal";
-@import "../vendors/bower_components/bootstrap/scss/tooltip";
-@import "../vendors/bower_components/bootstrap/scss/popover";
-@import "../vendors/bower_components/bootstrap/scss/carousel";
-@import "../vendors/bower_components/bootstrap/scss/utilities";
-@import "../vendors/bower_components/bootstrap/scss/print";
+@import "../vendors/bootstrap/scss/bootstrap";
 
 
 // Bootstrap overrides
@@ -93,6 +61,11 @@
 @import "inc/theme";
 @import "inc/ie-warning";
 @import "inc/error";
+@import "inc/results";
+@import "inc/issue-tracker";
+@import "inc/team";
+@import "inc/blog";
+@import "inc/q-a";
 
 
 // Widgets
@@ -105,6 +78,8 @@
 @import "inc/widgets/profile";
 @import "inc/widgets/contact";
 @import "inc/widgets/signups";
+@import "inc/widgets/time";
+@import "inc/widgets/search";
 
 
 // Vendor overrides
@@ -123,3 +98,6 @@
 @import "inc/vendor-overrides/lightgallery";
 @import "inc/vendor-overrides/jquery.scrollbar";
 @import "inc/vendor-overrides/Waves";
+@import "inc/vendor-overrides/jqTree";
+@import "inc/vendor-overrides/rateYo";
+@import "inc/vendor-overrides/jquery-text-counter";

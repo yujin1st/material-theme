@@ -6,17 +6,21 @@
 
 .page-link {
   border-radius: 50% !important;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
   z-index: 1;
   cursor: pointer;
-  @include transition(background-color 300ms, color 300ms);
+  transition: background-color 300ms, color 300ms;
   margin: 0 1px;
 
   & > .zmdi {
     font-size: 1.5rem;
+  }
+
+  &:focus {
+    box-shadow: none;
   }
 }
 
@@ -30,7 +34,6 @@
     &:before {
       font-family: $font-family-icon;
       font-size: 1rem;
-      line-height: 2.55rem;
     }
   }
 }

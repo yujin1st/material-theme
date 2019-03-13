@@ -4,9 +4,9 @@
       border-bottom-width: $table-border-width;
     }
   }
-  
+
   &:not(.table-dark) {
-    thead th {
+    thead:not(.thead-dark) {
       color: $headings-color;
     }
   }

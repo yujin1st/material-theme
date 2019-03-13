@@ -17,8 +17,12 @@
 }
 
 .listview__item {
-  padding: 15px $card-spacer-x;
-  @include transition(background-color 300ms);
+  padding: 1.25rem $card-spacer-x;
+  transition: background-color 300ms;
+
+  & > .avatar-char {
+    margin-right: 1.2rem;
+  }
 }
 
 .listview:not(.listview--block) {
@@ -31,7 +35,7 @@
   height: 3rem;
   border-radius: 50%;
   vertical-align: top;
-  margin: -0.1rem 1.2rem 0 0;
+  margin: 0 1.2rem 0 0;
 }
 
 .listview__content {
@@ -78,6 +82,10 @@
     margin: 0.2rem 0.25rem 0.055rem 0;
     background-color: $white;
   }
+}
+
+.listview__checkbox {
+  margin-right: 0.5rem;
 }
 
 // Listview modifier classes

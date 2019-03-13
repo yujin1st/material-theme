@@ -1,10 +1,5 @@
 .modal-content {
-  text-align: left;
   box-shadow: $modal-content-box-shadow-sm-up;
-}
-
-.modal-dialog {
-  width: calc(100% - 1rem);
 }
 
 .modal-title {
@@ -24,24 +19,6 @@
     &:hover,
     &:focus {
       background-color: $gray-100;
-    }
-  }
-}
-
-@include media-breakpoint-up(sm) {
-  .modal {
-    text-align: center;
-
-    &:before {
-      content: '';
-      height: 100%;
-      width: 1px;
-    }
-
-    &:before,
-    .modal-dialog {
-      display: inline-block;
-      vertical-align: middle;
     }
   }
 }

@@ -14,11 +14,10 @@ $toggle-switch-rail-bg: #e0e0e0;
 
   &:before,
   &:after {
-    will-change: left, background-color;
     content: '';
     position: absolute;
     left: 0;
-    @include transition(left 200ms, background-color, 200ms);
+    transition: left 300ms, background-color, 300ms;
   }
 
   &:before {
@@ -35,7 +34,7 @@ $toggle-switch-rail-bg: #e0e0e0;
     border-radius: 50%;
     background-color: $white;
     left: 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+    box-shadow: 0 2px 8px rgba($black, 0.2);
     z-index: 1;
   }
 }
@@ -51,7 +50,7 @@ $toggle-switch-rail-bg: #e0e0e0;
   cursor: pointer;
 
   &:checked {
-    & ~ .toggle-switch__helper{
+    & ~ .toggle-switch__helper {
       &:after {
         left: calc(100% - 20px);
         background-color: $teal;
@@ -67,7 +66,7 @@ $toggle-switch-rail-bg: #e0e0e0;
 
   &:active {
     & ~ .toggle-switch__helper:after {
-      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 0 0 10px rgba($black, 0.05);
     }
   }
 }

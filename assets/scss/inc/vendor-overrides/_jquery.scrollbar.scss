@@ -1,5 +1,6 @@
 .scrollbar-inner {
   height: 100%;
+  overflow: auto;
 
   & > .scroll-element {
     @include transition(opacity 300ms);

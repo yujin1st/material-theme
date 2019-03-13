@@ -26,7 +26,7 @@
     font-weight: normal;
   }
 
-  .swal2-buttonswrapper {
+  .swal2-actions {
     margin-top: 30px;
 
     .btn {
@@ -36,6 +36,6 @@
   }
 }
 
-.swal2-container.in {
+.swal2-container.swal2-shown {
   background-color: rgba($black, 0.2);
 }

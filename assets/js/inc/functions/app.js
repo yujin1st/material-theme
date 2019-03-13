@@ -70,5 +70,37 @@ $(document).ready(function () {
                 $(this).addClass('form-control--active');
             }
         });
+
+        $(this).find('.form-control').change(function () {
+            var x = $(this).val();
+
+            if(!x.length == 0) {
+                $(this).find('.form-control').addClass('form-control--active');
+            }
+        });
+    }
+
+
+    /*------------------------------------------------
+        Clock
+    -------------------------------------------------*/
+    if($('.time')[0]) {
+        var newDate = new Date();
+        newDate.setDate(newDate.getDate());
+
+        setInterval( function() {
+            var seconds = new Date().getSeconds();
+            $('.time__sec').html(( seconds < 10 ? '0' : '' ) + seconds);
+        },1000);
+
+        setInterval( function() {
+            var minutes = new Date().getMinutes();
+            $('.time__min').html(( minutes < 10 ? '0' : '' ) + minutes);
+        },1000);
+
+        setInterval( function() {
+            var hours = new Date().getHours();
+            $('.time__hours').html(( hours < 10 ? '0' : '' ) + hours);
+        }, 1000);
     }
 });

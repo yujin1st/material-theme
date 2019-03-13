@@ -52,8 +52,8 @@
     font-family: $font-family-icon;
     position: absolute;
     left: 1px;
-    bottom: 6px;
-    font-size: 1.3rem;
+    bottom: 5px;
+    font-size: 1.2rem;
     color: $headings-color;
   }
 
@@ -112,8 +112,7 @@
       height: 2px;
       width: 0;
       bottom: 0;
-      @include transition(all 200ms);
-      transition-timing-function: ease;
+      transition: width 500ms ease;
       background-color: $blue;
     }
 

@@ -25,10 +25,7 @@
   float: left;
   padding: 2rem 2rem 2rem 2.4rem;
   margin-left: -2rem;
-
-  &:hover {
-    cursor: pointer;
-  }
+  cursor: pointer;
 
   &.toggled {
     .navigation-trigger__inner {
@@ -56,7 +53,7 @@
 .navigation-trigger__inner,
 .navigation-trigger__line {
   width: 18px;
-  @include transition(all 300ms);
+  transition: all 300ms;
 }
 
 .navigation-trigger__inner {
@@ -71,7 +68,7 @@
     top: -14px;
     background-color: rgba($white, 0.25);
     border-radius: 50%;
-    @include transition(all 300ms);
+    transition: all 300ms;
     transform: scale(0);
   }
 }
@@ -164,7 +161,7 @@
 
     &:before {
       @include font-icon('\f267', 2.5rem);
-      @include transition(transform 300ms, opacity 300ms);
+      transition: transform 300ms, opacity 300ms;
       position: absolute;
       left: 0;
       top: 0;
@@ -243,7 +240,7 @@
     z-index: $header-z-index + 1;
     display: flex;
     align-items: center;
-    @include transition(transform 300ms);
+    transition: transform 300ms;
 
     &:not(.search--toggled) {
       transform: translate3d(0,-105%,0);
@@ -267,7 +264,7 @@
   height: 2.9rem;
   padding: 0 1rem 0 3rem;
   width: 100%;
-  @include transition(background-color 300ms, color 300ms);
+  transition: background-color 300ms, color 300ms;
 
   @include media-breakpoint-up(lg) {
     @include search-float(rgba($white, 0.2), $white, $white);
@@ -292,7 +289,7 @@
   text-align: center;
   line-height: 3rem;
   cursor: pointer;
-  @include transition(color 300ms, transform 400ms);
+  transition: color 300ms, transform 300ms ease-out;
 
   @include media-breakpoint-down(lg) {
     color: $input-color;
@@ -334,7 +331,7 @@
   border-radius: $border-radius;
   position: relative;
   overflow: hidden;
-  @include transition(background-color 300ms);
+  transition: background-color 300ms;
 
   &:hover {
     & > small {
@@ -357,7 +354,7 @@
     color: $white;
     line-height: 45px;
     font-size: 1.5rem;
-    @include transition(background-color 500ms);
+    transition: background-color 500ms;
   }
 
   & > small {
@@ -365,7 +362,7 @@
     margin-top: 0.5rem;
     font-size: 0.95rem;
     color: $text-muted;
-    @include transition(color 500ms);
+    transition: color 500ms;
   }
 }
 
@@ -379,7 +376,7 @@
   right: 0;
   margin: auto;
   z-index: -1;
-  @include transition(transform 500ms);
+  transition: transform 500ms;
   backface-visibility: hidden;
 }
 
@@ -392,7 +389,6 @@
   width: 100%;
   box-shadow: $header-shadow;
   padding: 0 1rem 0.5rem;
-  margin-top: -0.85rem;
   list-style: none;
   text-align: center;
 
@@ -411,7 +407,7 @@
       text-transform: uppercase;
       padding: 1rem;
       display: block;
-      @include transition(color 300ms);
+      transition: color 300ms;
 
       &:hover {
         color: $white;

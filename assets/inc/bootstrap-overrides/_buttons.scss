@@ -1,33 +1,25 @@
-.btn {
-  cursor: pointer;
+@mixin btn-raised {
+  box-shadow: 0 4px 3px -2px rgba($black, 0.15), 0 2px 2px 0 rgba($black, 0.04), 0 1px 5px 0 rgba($black, 0.02) !important;
 
-  &:not(.btn-light):not([class*="btn-outline-"]):not(.btn-link):not(.btn-default) {
-    color: $white;
+  &:hover {
+    box-shadow: 0 2px 4px -1px rgba($black, 0.15), 0 4px 5px 0 rgba($black, 0.14), 0 1px 10px 0 rgba($black, 0.12) !important;
+  }
+
+  &:active {
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 10px 2px rgba(0,0,0,.12) !important;
   }
 }
 
-.btn-light {
-  background-color: $white;
-  box-shadow: 0 2px 3px 0 rgba($black, 0.05);
-  border-color: #efefef;
-  color: #545657;
+.btn {
+  transition: box-shadow 300ms, background-color 300ms, border-color 300ms;
 
-  &:active,
-  &:focus,
-  &:hover {
-    box-shadow: 0 2px 3px 0 rgba($black, 0.05);
+  &:not([class*="btn-outline-"]) {
+    border-color: transparent !important;
   }
+}
 
-  &:hover {
-    background-color: #f7f7f7;
-    border-color: #e7e7e7;
-  }
-
-  &:active,
-  &:focus {
-    border-color: #e3e3e3;
-    background-color: #f4f4f4;
-  }
+.btn--raised {
+  @include btn-raised();
 }
 
 .btn--icon {
@@ -41,10 +33,9 @@
 
 .btn--icon-text {
   & > .zmdi {
-    font-size: 1.2rem;
-    display: inline-block;
-    vertical-align: top;
-    margin: 1px 5px 0 0;
+    font-size: 1.15rem;
+    margin: -1px 5px 0 0;
+    vertical-align: middle;
   }
 }
 
@@ -53,14 +44,16 @@
   height: 50px;
   width: 50px;
   padding: 0;
-  line-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
-  box-shadow: 0 3px 7px rgba($black, 0.15);
+  @include btn-raised();
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 
   &,
   &:hover,
@@ -68,12 +61,6 @@
     color: $white;
 
   }
-}
-
-.btn--fixed {
-  position: fixed !important;
-  bottom: 30px;
-  right: 30px;
 }
 
 .btn-group-justified {
@@ -92,12 +79,12 @@
   & > .btn {
     background-color: $gray-100;
     cursor: pointer;
-    box-shadow: none !important;
-    border: 0 !important;
+    box-shadow: none;
+    border: 0;
     margin: 0;
 
     &:not(.active) {
-      color: $body-color !important;
+      color: $body-color;
     }
 
     &.active {
@@ -109,13 +96,17 @@
 
 .btn-group--colors {
   & > .btn {
-    box-shadow: none !important;
+    box-shadow: none;
     border-radius: 50% !important;
     width: 30px;
     height: 30px;
-    margin-right: 3px;
+    margin-right: 5px;
     margin-bottom: 3px;
     position: relative;
+    
+    &:not([class*="bg-"]) {
+      border-color: $gray-100 !important;
+    }
 
     &:before {
       @include font-icon('\f26b', 16px);
